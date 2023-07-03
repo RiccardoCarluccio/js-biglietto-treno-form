@@ -1,5 +1,10 @@
-const tripLength = prompt('How many kilometres do you want to travel?');
-const yearOfBirth = prompt('In what year were you born?');
+//const tripLength = prompt('How many kilometres do you want to travel?');
+//const yearOfBirth = prompt('In what year were you born?');
+
+const tripLength = document.getElementById("trip-length").value;
+const yearOfBirth = document.getElementById("year-of-birth").value;
+console.log(tripLength);
+console.log(yearOfBirth);
 
 const currentYear = new Date().getFullYear();
 const userAge = currentYear - parseInt(yearOfBirth);

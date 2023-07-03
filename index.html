@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Train Ticket</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Train Ticket Form</title>
 </head>
 
 <body>
@@ -12,6 +14,19 @@
   <h1>Train ticket price generator</h1>
   <div id="testAge"></div>
   <div id="priceResult"></div>
+
+  <form>
+    <label for="fname">Enter your trip length</label>
+    <input type="text" id="trip-length" name="trip-length">
+
+    <label for="lname">Enter your year of birth</label>
+    <input type="text" id="year-of-birth" name="year-of-birth">
+
+    <button class="btn btn-primary">Confirm</btn>
+  </form>
+
+  <!-- <div id="testAge"></div>     vengono inseriti nel form
+  <div id="priceResult"></div> -->
 
   <script src="JS/mainjs.js"></script>
 </body>
