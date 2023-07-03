@@ -28,4 +28,7 @@ if (userAge < 18) {
 }
 
 const finalPrice = Math.round((ticketPrice *= discount) * 100) / 100;
+//alternativa
+//const finalPrice = (ticketPrice *= discount).toFixed(2);
+//il parseInt che wrappa tutto, non funziona. Da capire poi perchè
 document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
