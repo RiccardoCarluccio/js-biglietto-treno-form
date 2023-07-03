@@ -1,10 +1,10 @@
-//const tripLength = prompt('How many kilometres do you want to travel?');
-//const yearOfBirth = prompt('In what year were you born?');
+const btnConfirm = document.querySelector('btn.confirm');
 
-const tripLength = document.getElementById("trip-length").value;
-const yearOfBirth = document.getElementById("year-of-birth").value;
-console.log(tripLength);
-console.log(yearOfBirth);
+btnConfirm.addEventListener("Click", function getData() {
+  const tripLength = document.getElementById("trip-length").value;
+  const yearOfBirth = document.getElementById("year-of-birth").value;
+})
+//da inserire nella funzione stessa i richiami delle variabili
 
 const currentYear = new Date().getFullYear();
 const userAge = currentYear - parseInt(yearOfBirth);
@@ -12,17 +12,6 @@ const userAge = currentYear - parseInt(yearOfBirth);
 document.getElementById('testAge').innerHTML = `You are ${userAge} years old`;
 
 let ticketPrice = 0.21 * parseInt(tripLength);
-
-// if (userAge < 18) {
-//   const finalPrice = Math.round((ticketPrice *= 0.8) * 100) / 100;
-//   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
-// } else if (userAge > 65) {
-//   const finalPrice = Math.round((ticketPrice *= 0.6) * 100) / 100;
-//   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
-// } else {
-//   const finalPrice = Math.round(ticketPrice * 100) / 100;
-//   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${ticketPrice}€`;
-// }
 
 let discount = 1;
 
@@ -36,4 +25,5 @@ const finalPrice = Math.round((ticketPrice *= discount) * 100) / 100;
 //alternativa
 //const finalPrice = (ticketPrice *= discount).toFixed(2);
 //il parseInt che wrappa tutto, non funziona. Da capire poi perchè
+
 document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
