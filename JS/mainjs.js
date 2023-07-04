@@ -10,7 +10,7 @@ btnConfirm.addEventListener("click", function getData() {
   const tripLength = tripLengthInput.value;
   const yearOfBirth = yearOfBirthInput.value;
 
-  let ticketPrice = 0.21 * parseInt(tripLength);
+  const ticketPrice = 0.21 * parseInt(tripLength);
 
   let discount = 1;
   const userAge = currentYear - parseInt(yearOfBirth);
@@ -21,7 +21,7 @@ btnConfirm.addEventListener("click", function getData() {
     discount = 0.6;
   }
 
-  const finalPrice = Math.round((ticketPrice *= discount) * 100) / 100;
+  const finalPrice = Math.round((ticketPrice * discount) * 100) / 100;
 
   document.getElementById('testAge').innerHTML = `You are ${userAge} years old`;
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
