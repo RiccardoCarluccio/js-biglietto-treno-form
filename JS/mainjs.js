@@ -33,7 +33,7 @@ btnConfirm.addEventListener("click", function getData() {
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
 })
 
-btnHide.addEventListener("click", function hide() {
-  ticket.classList.replace("d-block", "d-none");    //non funziona
-  // ticket.classList.add("d-none");   //non funziona
-})
+// btnHide.addEventListener("click", function hide() {
+//   ticket.classList.replace("d-block", "d-none");    //non funziona
+//   // ticket.classList.add("d-none");   //non funziona
+// })
