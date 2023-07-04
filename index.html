@@ -20,12 +20,8 @@
     <label for="year-of-birth">Enter your year of birth</label>
     <input type="text" id="year-of-birth" name="year-of-birth">
 
-    <button type="button" class="btn btn-primary btn-confirm">Confirm</button>
-    <button type="reset" class="btn btn-primary">Reset</button>
-    <button type="button" class="btn btn-primary btn-hide">Hide</button>
-
     <!-- SELECT -->
-    <label for="age-select">Choose your age group</label>
+    <label for="age-select">Or your age group</label>
 
     <select name="age-group" id="age-select">
       <option value="">Please choose an option</option>
@@ -33,6 +29,13 @@
       <option value="adult">Adult</option>
       <option value="overage">Over 65</option>
     </select>
+
+    <!-- BOTTONI -->
+    <div>
+      <button type="button" class="btn btn-primary btn-confirm">Confirm</button>
+      <button type="reset" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn btn-primary btn-hide">Hide</button> <!-- nasconde il biglietto perchè fa refreshare la pagina -->
+    </div>
   </form>
 
   <div id="finalData">
