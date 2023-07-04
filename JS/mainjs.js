@@ -1,11 +1,11 @@
 const btnConfirm = document.querySelector(".btn-confirm");
-const btnReset = document.querySelector(".btn-reset");
+const btnHide = document.querySelector(".btn-hide");
 
 const currentYear = new Date().getFullYear();
 
 const tripLengthInput = document.getElementById("trip-length");
 const yearOfBirthInput = document.getElementById("year-of-birth");
-const ticket = document.getElementById("finalData")
+const ticket = document.getElementById("finalData");
 
 
 btnConfirm.addEventListener("click", function getData() {
@@ -31,6 +31,7 @@ btnConfirm.addEventListener("click", function getData() {
   document.getElementById('priceResult').innerHTML = `Your ${tripLength}km trip costs ${finalPrice}€`;
 })
 
-btnReset.addEventListener("click", function hide() {
+btnHide.addEventListener("click", function hide() {
   ticket.classList.replace("d-block", "d-none");    //non funziona
+  // ticket.classList.add("d-none");   //non funziona
 })
