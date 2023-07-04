@@ -5,6 +5,7 @@ const currentYear = new Date().getFullYear();
 
 const tripLengthInput = document.getElementById("trip-length");
 const yearOfBirthInput = document.getElementById("year-of-birth");
+const ageGroup = document.getElementById("age-select");
 const ticket = document.getElementById("finalData");
 
 
@@ -18,10 +19,11 @@ btnConfirm.addEventListener("click", function getData() {
 
   let discount = 1;
   const userAge = currentYear - parseInt(yearOfBirth);
+  const userAgeAlt = ageGroup.value;
 
-  if (userAge < 18) {
+  if (userAge < 18 || userAgeAlt === 'underage') {
     discount = 0.8;
-  } else if (userAge > 65) {
+  } else if (userAge > 65 || userAgeAlt === 'overage') {
     discount = 0.6;
   }
 
